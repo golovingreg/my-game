@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Log from './components/Log';
+import Player from './components/Player';
+import Actions from './components/Actions';
+import Info from './components/Info';
+// import Dice from './Dice';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <div className="app">
+        <div className="part"><Log /></div>
+        <div className="part"><Player /></div>
+        <div className="part"><Actions /></div>
+        <div className="part"><Info /></div>
+      </div>
+    );
+  }
 }
 
 export default App;
